@@ -1,0 +1,25 @@
+build: off
+
+clone_folder: c:\gopath\src\github.com\Bios-Marcel\samp-launcher-terminal
+
+environment:
+  GOPATH: c:\gopath
+
+stack: go 1.11
+
+artifacts:
+  - path: samp-launcher-terminal.exe
+    name: samp-launcher-terminal.exe
+
+install:
+  - set PATH=%PATH%;C:\msys64\mingw64\bin
+  - go get -v ./...
+
+build_script:
+  - go build
+
+before_test:
+  - go vet ./...
+
+test_script:
+  - go test ./...
