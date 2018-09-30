@@ -2,14 +2,8 @@
 
 package samp
 
-func connectWithRCONPasswordAndServerPassword(username, address string, port int, rconPassword, serverPassword string) {
+import "github.com/Bios-Marcel/sampcmd-go/sampcmd"
 
-}
-
-func connectWithRCONPassword(username, address string, port int, rconPassword string) {
-
-}
-
-func connectWithServerPassword(username, address string, port int, serverPassword string) {
-
+func launchSAMP(args string) {
+	sampcmd.LaunchSAMP(args)
 }
